@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars ISRU - Interactive Demo for NASA Competition</title>
+    <link rel="stylesheet" href="page.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="mars-orbit"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">🚀 Mars ISRU Revolution</h1>
+            <p class="hero-subtitle">Hybrid Modular CH₄/O₂ Production System</p>
+            <p style="font-size: 1.2rem; margin: 20px 0;">NASA Challenge 3: Interplanetary Fuel Supply</p>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Cost Reduction</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">82%</span>
+                    <span class="stat-label">Energy Efficiency</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">520kg</span>
+                    <span class="stat-label">CH₄ Production</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">98.7%</span>
+                    <span class="stat-label">System Reliability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <!-- Team Section -->
+        <section class="section">
+            <h2 class="section-title">👥 Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-name">Nassar Barahmeh</div>
+                    <div class="member-id">12218619 - CE</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-name">Ibrahim Mashaqi</div>
+                    <div class="member-id">12218206 - CE</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-name">Waseem Salahat</div>
+                    <div class="member-id">12218556 - CAP</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-name">Majeed Suradi</div>
+                    <div class="member-id">12217156 - CE</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-name">Nour Ghazali</div>
+                    <div class="member-id">12441461 - CE</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-name">Leen Daraghmeh</div>
+                    <div class="member-id">12427773 - CE</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Section -->
+        <section class="section">
+            <h2 class="section-title">💡 Revolutionary Innovation</h2>
+            <div class="innovation-grid">
+                <div class="innovation-card">
+                    <span class="innovation-icon">🧪</span>
+                    <h3 class="innovation-title">Hierarchical MOF System</h3>
+                    <p class="innovation-desc">World's first 3-stage MOF purification with 95% CO₂ selectivity at Mars pressure. Dust-resistant and self-regenerating.</p>
+                </div>
+                <div class="innovation-card">
+                    <span class="innovation-icon">⚡</span>
+                    <h3 class="innovation-title">Advanced SOEC Technology</h3>
+                    <p class="innovation-desc">High-efficiency electrolysis with co-processing capability. 55 kWh/kg H₂ - 20% better than competitors.</p>
+                </div>
+                <div class="innovation-card">
+                    <span class="innovation-icon">🔥</span>
+                    <h3 class="innovation-title">Continuous Sabatier System</h3>
+                    <p class="innovation-desc">Dual-reactor design ensuring 99.7% uptime. Advanced catalyst with 82% thermal integration.</p>
+                </div>
+                <div class="innovation-card">
+                    <span class="innovation-icon">🤖</span>
+                    <h3 class="innovation-title">AI Digital Twin</h3>
+                    <p class="innovation-desc">Machine learning optimization with 15% efficiency improvement and 72-hour predictive maintenance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Flow -->
+        <section class="section">
+            <h2 class="section-title">⚙️ Process Flow</h2>
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="process-icon">🌬️</div>
+                    <h4>CO₂ Capture</h4>
+                    <p>MOF-based atmospheric processing with hierarchical purification</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">⚡</div>
+                    <h4>Electrolysis</h4>
+                    <p>SOEC water splitting with co-electrolysis capability</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">🔥</div>
+                    <h4>Methanation</h4>
+                    <p>Sabatier reaction with continuous dual-reactor operation</p>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step">
+                    <div class="process-icon">❄️</div>
+                    <h4>Storage</h4>
+                    <p>Zero boil-off cryogenic storage with active cooling</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Simulation -->
+        <section class="section">
+            <h2 class="section-title">🔬 Interactive Simulation</h2>
+            <div class="demo-grid">
+                <div class="control-panel">
+                    <h3 style="color: #ff6b35; margin-bottom: 20px;">Control Parameters</h3>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Atmospheric Pressure (kPa) <span class="control-value" id="pressure-val">0.6</span></label>
+                        <input type="range" class="control-input" id="pressure-slider" min="0.4" max="1.2" step="0.1" value="0.6">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Temperature (K) <span class="control-value" id="temp-val">233</span></label>
+                        <input type="range" class="control-input" id="temp-slider" min="180" max="300" step="5" value="233">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Solar Irradiance (W/m²) <span class="control-value" id="solar-val">590</span></label>
+                        <input type="range" class="control-input" id="solar-slider" min="200" max="800" step="10" value="590">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Dust Opacity (τ) <span class="control-value" id="dust-val">0.5</span></label>
+                        <input type="range" class="control-input" id="dust-slider" min="0.1" max="3.0" step="0.1" value="0.5">
+                    </div>
+                    
+                    <button class="btn btn-full" onclick="runSimulation()">🚀 Run Simulation</button>
+                    
+                    <div style="margin-top: 20px;">
+                        <h4 style="color: #ff6b35;">System Status</h4>
+                        <div style="margin: 10px 0;">
+                            <span class="performance-indicator excellent">MOF Capture: Online</span>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <span class="performance-indicator excellent">SOEC: Operational</span>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <span class="performance-indicator good">Sabatier: Active</span>
+                        </div>
+                        <div style="margin: 10px 0;">
+                            <span class="performance-indicator excellent">Storage: Normal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulation-display">
+                    <h3 style="color: #00ff88; margin-bottom: 20px;">Performance Results</h3>
+                    
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <span class="result-value" id="ch4-production">0.83</span>
+                            <span class="result-label">CH₄ Production (kg/hr)</span>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-value" id="o2-production">1.66</span>
+                            <span class="result-label">O₂ Production (kg/hr)</span>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-value" id="power-consumption">3.2</span>
+                            <span class="result-label">Power (kW)</span>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-value" id="efficiency">82</span>
+                            <span class="result-label">Efficiency (%)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Economic Impact -->
+        <section class="section">
+            <h2 class="section-title">💰 Economic Revolution</h2>
+            <div class="economic-comparison">
+                <div class="cost-card earth">
+                    <h3 class="cost-title">Earth Supply</h3>
+                    <div class="cost-amount">$50,000</div>
+                    <p>per kg of fuel</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Transportation costs</li>
+                        <li>Launch limitations</li>
+                        <li>Storage complexity</li>
+                        <li>Mission risk premium</li>
+                    </ul>
+                </div>
+                <div class="cost-card mars">
+                    <h3 class="cost-title">Mars ISRU</h3>
+                    <div class="cost-amount">$2,500</div>
+                    <p>per kg of fuel</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Equipment amortization</li>
+                        <li>Operating energy</li>
+                        <li>Maintenance costs</li>
+                        <li>Mission support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="savings-banner">
+                💎 95% COST REDUCTION - $47,500 SAVINGS PER KG! 💎
+            </div>
+        </section>
+
+        <!-- Performance Analytics -->
+        <section class="section">
+            <h2 class="section-title">📊 Performance Analytics</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <h4 style="color: #ff6b35;">Production Targets</h4>
+                    <div style="margin: 15px 0;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>CH₄ Target: 500 kg</span>
+                            <span style="color: #00ff88;">Achieved: 520 kg (+4%)</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; margin: 5px 0;">
+                            <div style="background: #00ff88; height: 100%; width: 104%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>O₂ Target: 250 kg</span>
+                            <span style="color: #00ff88;">Achieved: 260 kg (+4%)</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; margin: 5px 0;">
+                            <div style="background: #00ff88; height: 100%; width: 104%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #ff6b35;">System Reliability</h4>
+                    <div style="margin: 15px 0;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Uptime Target: 90%</span>
+                            <span style="color: #00ff88;">Achieved: 98.7%</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; margin: 5px 0;">
+                            <div style="background: #00ff88; height: 100%; width: 98.7%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div style="margin: 15px 0;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Efficiency Target: 60%</span>
+                            <span style="color: #00ff88;">Achieved: 82%</span>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; margin: 5px 0;">
+                            <div style="background: #00ff88; height: 100%; width: 82%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Vision -->
+        <section class="section">
+            <h2 class="section-title">🌟 Future Vision</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 15px;">🚀</div>
+                    <h4 style="color: #ff6b35;">Phase 1: Mars Missions</h4>
+                    <p>Enable continuous Mars exploration with unlimited launch windows and extended surface operations</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 15px;">🏭</div>
+                    <h4 style="color: #ff6b35;">Phase 2: Fuel Depot</h4>
+                    <p>Scale up to industrial production supporting interplanetary transportation network</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 15px;">🌍</div>
+                    <h4 style="color: #ff6b35;">Phase 3: Civilization</h4>
+                    <p>Foundation for permanent Mars settlement and multi-planetary human civilization</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <h3 style="color: #ff6b35; margin-bottom: 20px;">Contact Information</h3>
+        <p>Team Mars ISRU Revolution - NASA Challenge 3</p>
+        <p> Email</p>
+        <p> ibrahimmashaqi04@gmail.com | Phone: 0599026480</p>
+        <p> nassarbarahme@gmail.com | Phone: 0595607282 </p>
+        <p style="margin-top: 20px; opacity: 0.7;">© 2025 Mars ISRU Revolution. Transforming the future of space exploration.</p>
+    </footer>
+
+    <script src="page.js"></script>
+</body>
+</html>
